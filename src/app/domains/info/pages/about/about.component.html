@@ -1,0 +1,14 @@
+<div>
+  <!--padre-->
+  <p>
+    <input type="number" [value]="duration()" (change)="changeDuration($event)">
+  </p>
+  <p>
+    <input type="text" [value]="message()" (change)="changeMessage($event)">
+  </p>
+  @if (duration()>0) {
+    <app-counter [duration]="duration()" [message]="message()" />
+  }
+</div>
+
+
